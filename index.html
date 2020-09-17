@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Record</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Reading Record</h1>
+    <button type="button" class="btn btn-dark btn-small add-btn" id="add-btn">Add New Book</button>
+  </header>
+
+  <!-- Add book section -->
+  <div class="addBook-container" id="addBook-container">
+    
+    <h3>Add new book you've read!
+      <button type="button" class="btn btn-dark btn-sm close-btn" id="close-btn">X</button></h3>
+    <form id="form">
+      <div class="form-group">
+        <div class="form-group row">
+          <label for="title" class="title col-sm-2 col-form-label">Title</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="title" placeholder="Enter title" required />
+          </div>  
+        </div>
+        <div class="form-group row">
+          <label for="author" class="author col-sm-2 col-form-label">Author</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="author" placeholder="Enter author name" required /> 
+          </div>  
+        </div>
+        <div class="form-group row">
+          <label for="grade" class="col-sm-2 col-form-label">Grade</label>
+          <div class="col-sm-4">
+            <input type="number" class="form-control" id="grade" min="1" max="5" required />
+          </div>
+          <label for="date" class="col-sm-1 col-form-label">Date</label>
+          <div class="col-sm-5">
+            <input type="date" class="form-control" id="date" required/>
+          </div>
+        </div> 
+      </div>
+      <button type="submit" class="btn btn-dark submit-btn" id="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <!-- Reading history section -->
+  <div class="history-container">
+    <h3>Reading History</h3>
+    <div class="cards" id="cards"></div>
+  </div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
